@@ -3,7 +3,7 @@ echo "updating sys first"
 sleep 2
 pkg -y update
 check_Packages() {
-for i in python3 php cowsay git; do
+for i in python3 php cowsay git figlet; do
 	dpkg -s $i &> /dev/null
 	if [[ $? -eq 0 ]]; then
 		echo -e "\e[1;32m[\e[\e[1;92m+\e[1;33m]\e[1;92m${i}\e[0m is Installed"
@@ -15,7 +15,7 @@ for i in python3 php cowsay git; do
 done
 }
 install_Packages() {
-for i in python3 php cowsay git ; do
+for i in python3 php cowsay git figlet; do
 	dpkg -s $i &> /dev/null
 	if [[ $? -eq 0 ]]; then
 		echo ""
@@ -37,4 +37,8 @@ check_Packages
 sleep 2
 install_Packages
 sleep 2
+figlet -c "thankyou" | lolcat
+echo "to run the main tool type"
+echo "$python3 gen.py"
+sleep 4
 clear
