@@ -25,7 +25,7 @@ $ git clone https://github.com/g3r0m4/strong-p.ass.git
 
 - run - 
 ```
-$ cd eyephisher
+$ cd strong-p.ass
 ```
 - tun first the install file
 ```
